@@ -1,0 +1,624 @@
+extends layout
+
+block content
+ if(!user)
+  #preloader
+    #status  
+  header
+    // Navbar
+    nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+     nav.navigation
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse')
+            span.sr-only Открыть меню
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          // Logo
+          .logo
+            a(href='index.html')
+              | INFORMATI
+              i on
+        // end navbar-header
+        #navbar-collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.active
+              a(href='index.html') Главная
+            li
+              a(href='#') Услуги
+            li
+              a(href='#') Проекты
+            li
+              a(href='#') Статьи
+            li
+              a(href='#') Контакты
+            li
+              a(href = "/login") Login
+            li
+              a(href = "/register") Register
+            li
+              #search
+                i.pe-7s-search.search-trigger
+              .search-bar
+                .search-wrap
+                  form(role='form')
+                    .form-group
+                      input.form-control.searchbox(type='search', placeholder='Search')
+                    button.search-button(type='submit')
+                      i.pe-7s-search
+          // end menu
+        // end collapse
+      // end container
+    // end navigation
+    // End Navbar
+            
+  .main-wrapper
+   section.cd-slider-wrapper
+    ul.cd-slider
+      li.visible
+        div
+          h2 Добро пожаловать!
+          p Современный шаблон сайта HTML5
+          a.cd-btn(href='#0') Подробнее
+      li
+        div
+          h2 Информация
+          p Короткое описание товара или услуги
+          a.cd-btn(href='#0') подробнее
+      li
+        div
+          h2 Информация
+          p Короткое описание товара или услуги
+          a.cd-btn(href='#0') подробнее
+      li
+        div
+          h2 Информация
+          p Короткое описание товара или услуги
+          a.cd-btn(href='#0') подробнее
+    // .cd-slider
+    ol.cd-slider-navigation
+      li.selected
+        a(href='#0')
+          em Слайд#1
+      li
+        a(href='#0')
+          em Слайд#2
+      li
+        a(href='#0')
+          em Слайд#3
+      li
+        a(href='#0')
+          em Слайд#4
+    // .cd-slider-navigation
+    .cd-svg-cover(data-step1='M1402,800h-2V0.6c0-0.3,0-0.3,0-0.6h2v294V800z', data-step2='M1400,800H383L770.7,0.6c0.2-0.3,0.5-0.6,0.9-0.6H1400v294V800z', data-step3='M1400,800H0V0.6C0,0.4,0,0.3,0,0h1400v294V800z', data-step4='M615,800H0V0.6C0,0.4,0,0.3,0,0h615L393,312L615,800z', data-step5='M0,800h-2V0.6C-2,0.4-2,0.3-2,0h2v312V800z', data-step6='M-2,800h2L0,0.6C0,0.3,0,0.3,0,0l-2,0v294V800z', data-step7='M0,800h1017L629.3,0.6c-0.2-0.3-0.5-0.6-0.9-0.6L0,0l0,294L0,800z', data-step8='M0,800h1400V0.6c0-0.2,0-0.3,0-0.6L0,0l0,294L0,800z', data-step9='M785,800h615V0.6c0-0.2,0-0.3,0-0.6L785,0l222,312L785,800z', data-step10='M1400,800h2V0.6c0-0.2,0-0.3,0-0.6l-2,0v312V800z')
+      svg(height='100%', width='100%', preserveaspectratio='none', viewbox='0 0 1400 800')
+        title World Information
+        desc адаптивный CSS шаблон
+        path#cd-changing-path(d='M1402,800h-2V0.6c0-0.3,0-0.3,0-0.6h2v294V800z')
+    // .cd-svg-cover
+  // .cd-slider-wrapper
+  // Our Services
+
+
+ if(user)
+  #preloader
+   #status  
+  header
+   // Navbar
+   nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+    nav.navigation
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse')
+            span.sr-only Открыть меню
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          // Logo
+          .logo
+            a(href='index.html')
+              | INFORMATI
+              i on
+        // end navbar-header
+        #navbar-collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.active
+              a(href='index.html') Главная
+            li
+              a(href='#') Услуги
+            li
+              a(href='#') Проекты
+            li
+              a(href='#') Статьи
+            li
+              a(href='#') Контакты
+            li 
+              a(href = "/logout") #{user.username} Выход
+            li
+              #search
+                i.pe-7s-search.search-trigger
+              .search-bar
+                .search-wrap
+                  form(role='form')
+                    .form-group
+                      input.form-control.searchbox(type='search', placeholder='Search')
+                    button.search-button(type='submit')
+                      i.pe-7s-search
+          // end menu
+        // end collapse
+      // end container
+    // end navigation
+    // End Navbar
+  .main-wrapper
+   section.cd-slider-wrapper
+    ul.cd-slider
+      li.visible
+        div
+          h2 Добро пожаловать!
+          p Современный шаблон сайта HTML5
+          a.cd-btn(href='#0') Подробнее
+      li
+        div
+          h2 Информация
+          p Короткое описание товара или услуги
+          a.cd-btn(href='#0') подробнее
+      li
+        div
+          h2 Информация
+          p Короткое описание товара или услуги
+          a.cd-btn(href='#0') подробнее
+      li
+        div
+          h2 Информация
+          p Короткое описание товара или услуги
+          a.cd-btn(href='#0') подробнее
+    // .cd-slider
+    ol.cd-slider-navigation
+      li.selected
+        a(href='#0')
+          em Слайд#1
+      li
+        a(href='#0')
+          em Слайд#2
+      li
+        a(href='#0')
+          em Слайд#3
+      li
+        a(href='#0')
+          em Слайд#4
+    // .cd-slider-navigation
+    .cd-svg-cover(data-step1='M1402,800h-2V0.6c0-0.3,0-0.3,0-0.6h2v294V800z', data-step2='M1400,800H383L770.7,0.6c0.2-0.3,0.5-0.6,0.9-0.6H1400v294V800z', data-step3='M1400,800H0V0.6C0,0.4,0,0.3,0,0h1400v294V800z', data-step4='M615,800H0V0.6C0,0.4,0,0.3,0,0h615L393,312L615,800z', data-step5='M0,800h-2V0.6C-2,0.4-2,0.3-2,0h2v312V800z', data-step6='M-2,800h2L0,0.6C0,0.3,0,0.3,0,0l-2,0v294V800z', data-step7='M0,800h1017L629.3,0.6c-0.2-0.3-0.5-0.6-0.9-0.6L0,0l0,294L0,800z', data-step8='M0,800h1400V0.6c0-0.2,0-0.3,0-0.6L0,0l0,294L0,800z', data-step9='M785,800h615V0.6c0-0.2,0-0.3,0-0.6L785,0l222,312L785,800z', data-step10='M1400,800h2V0.6c0-0.2,0-0.3,0-0.6l-2,0v312V800z')
+      svg(height='100%', width='100%', preserveaspectratio='none', viewbox='0 0 1400 800')
+        title World Information
+        desc адаптивный CSS шаблон
+        path#cd-changing-path(d='M1402,800h-2V0.6c0-0.3,0-0.3,0-0.6h2v294V800z')
+    // .cd-svg-cover
+  // .cd-slider-wrapper
+  // Our Services
+
+
+  
+  section.section-wrap.services
+    .container
+      .row
+        .col-sm-4
+          .service-item.icon-effect-1.icon-blue.icon-effect-1a
+            a(href='#')
+              i.hi-icon.icon.icon-Click
+            h5.text-center Проектирование
+            .main-border.blue
+            p.text-center
+              | Таким образом новая модель организационной деятельности способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям.
+        // end service item
+        .col-sm-4
+          .service-item.icon-effect-1.icon-violet.icon-effect-1a
+            a(href='#')
+              i.hi-icon.icon.icon-Umbrella
+            h5.text-center Реализация
+            .main-border.violet
+            p.text-center
+              | Таким образом новая модель организационной деятельности способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям.
+        // end service item
+        .col-sm-4
+          .service-item.icon-effect-1.icon-orange.icon-effect-1a.last
+            a(href='#')
+              i.hi-icon.icon.icon-Dollars
+            h5.text-center Результативность
+            .main-border.orange
+            p.text-center
+              | Таким образом новая модель организационной деятельности способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям.
+        // end service item
+      // end row
+    // end container
+  // end services
+  // Call to Action
+  section.call-to-action
+    .container
+      h3.cta-subheading.text-center Мы предлагаем только качественные услуги
+      h2.text-center.mt30 Выбор за Вами
+      .col-lg-12.text-center.mt40
+        a#cta-button-solid.btn.btn-large.btn-rounded.btn-light-solid(href='#') Заказать
+        a#cta-button-stroke.btn.btn-large.btn-rounded.btn-light-transparent(href='#') Подробнее
+    // end container
+  // end call to action
+  // Core Features
+  section.core-features.style-1
+    .container
+      h2.text-center Наши преимущества
+      p.subheading.text-center Мы совершенствуем свои качетсва для Вас
+      .main-border.blue
+      .features-promo.mt70
+        .row
+          // start left column
+          .col-lg-3.col-md-4.col-sm-6
+            .features-item.features-right.text-right
+              .features-icon
+                i.icon.icon-Search
+              h5 Преимущество №1
+              p Описание функционала и качеств Вашей компании. Краткое введение.
+            // end features item
+            .features-item.features-right.text-right
+              .features-icon
+                i.icon.icon-Layers
+              h5 Преимущество №2
+              p Описание функционала и качеств Вашей компании. Краткое введение.
+            // end features item
+            .features-item.features-right.text-right
+              .features-icon
+                i.icon.icon-Drop
+              h5 Преимущество №3
+              p Описание функционала и качеств Вашей компании. Краткое введение.
+            // end features item
+          // end left column
+          .promo-img.col-lg-6.col-md-4.hidden-sm.hidden-xs.text-center
+            img(src='upload/core_features_img.jpg', alt='core-features-img')
+          // start right column
+          .col-lg-3.col-md-4.col-sm-6
+            .features-item
+              .features-icon
+                i.icon.icon-Tools
+              h5 Преимущество №4
+              p Описание функционала и качеств Вашей компании. Краткое введение.
+            // end features item
+            .features-item
+              .features-icon
+                i.icon.icon-Timer
+              h5 Преимущество №5
+              p Описание функционала и качеств Вашей компании. Краткое введение.
+            // end features item
+            .features-item
+              .features-icon
+                i.icon.icon-Notes
+              h5 Преимущество №6
+              p Описание функционала и качеств Вашей компании. Краткое введение.
+            // end features item
+          // end right column
+        // end row
+      // end features promo
+    // end container
+  // end core features
+  // Results
+  section.results
+    .container
+      .row
+        .col-sm-3.text-center
+          .statistic
+            span.timer(data-from='0', data-to='547')
+            h5.counter-text довольных клиента
+        // end col
+        .col-sm-3.text-center
+          .statistic
+            span.timer(data-from='0', data-to='1024')
+            h5.counter-text успешных проектов
+        // end col
+        .col-sm-3.text-center
+          .statistic
+            span.timer(data-from='0', data-to='3589')
+            h5.counter-text надежных партнеров
+        // end col
+        .col-sm-3.text-center
+          .statistic
+            span.timer(data-from='0', data-to='999')
+            h5.counter-text контрактов
+        // end col
+      // end row
+    // end container
+  // end results
+  // Our Team
+  section.section-wrap.our-team.bg-light
+    .container
+      h2.text-center Наша команда
+      p.subheading.text-center Лучшие из лучших
+      .main-border.blue
+      ul#team.clearfix
+        li.team-member
+          .team-img
+            img(src='upload/team_member_1.jpg', alt='team member 1')
+          .team-details.text-center
+            h5.team-title Оразмухамед
+            span Директор
+            .team-socials
+              a(href='#')
+                i.fa.fa-facebook
+              a(href='#')
+                i.fa.fa-twitter
+              a(href='#')
+                i.fa.fa-google-plus
+              a(href='#')
+                i.fa.fa-envelope
+        // end team member
+        li.team-member
+          .team-img
+            img(src='upload/team_member_2.jpg', alt='team member 2')
+          .team-details.text-center
+            h5.team-title Кулахмет Нургали
+            span Заместитель директора
+            .team-socials
+              a(href='#')
+                i.fa.fa-facebook
+              a(href='#')
+                i.fa.fa-twitter
+              a(href='#')
+                i.fa.fa-google-plus
+              a(href='#')
+                i.fa.fa-envelope
+        // end team member
+        li.team-member
+          .team-img
+            img(src='upload/team_member_3.jpg', alt='team member 3')
+          .team-details.text-center
+            h5.team-title Калдыбеков Саламат
+            span Топ-менеджер
+            .team-socials
+              a(href='#')
+                i.fa.fa-facebook
+              a(href='#')
+                i.fa.fa-twitter
+              a(href='#')
+                i.fa.fa-google-plus
+              a(href='#')
+                i.fa.fa-envelope
+        // end team member
+        li.team-member
+          .team-img
+            img(src='upload/team_member_4.jpg', alt='team member 4')
+          .team-details.text-center
+            h5.team-title Бекжанов Даурен
+            span Эксперт
+            .team-socials
+              a(href='#')
+                i.fa.fa-facebook
+              a(href='#')
+                i.fa.fa-twitter
+              a(href='#')
+                i.fa.fa-google-plus
+              a(href='#')
+                i.fa.fa-envelope
+        // end team member
+    // end container
+  // end our team
+  // From Blog
+  section.section-wrap.from-blog
+    .container
+      h2.text-center Новости & Статьи
+      p.subheading.text-center Последние события
+      .main-border.blue
+      .blog-articles.mt50
+        .col-xs-12.text-center
+          .entry-text
+            h3
+              a(href='#') Создание и продвижение компаний в сети Интернет
+            span.blog-data 9 августа, 2015
+          // end entry
+          .entry-text.mt40
+            h3
+              a(href='#') Создание и продвижение компаний в сети Интернет
+            span.blog-data 5 августа, 2015
+          // end entry
+          .entry-text.mt40
+            h3
+              a(href='#') Создание и продвижение компаний в сети Интернет
+            span.blog-data 3 августа, 2015
+          // end entry
+        // end column
+      // end blog-article
+    // end container
+  // end from blog
+  // Promo Boxes
+  section.promo-boxes
+    .container-fluid
+      .row
+        .col-md-4.nopadding
+          .promo-box-first
+            h2.heading-white Множество идей
+            p.white
+              | Таким образом новая модель организационной деятельности способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Повседневная практика показывает, что дальнейшее развитие различных форм деятельности требуют от нас анализа форм развития.
+            a.btn.btn-large.btn-rounded.btn-light-transparent(href='#') Читать
+            i.icon.icon-Click
+          // end fist promo box
+        // end col
+        .col-md-4.nopadding
+          .promo-box-second
+            i.icon.icon-Umbrella
+            h2.heading-white Правильность выбора
+            p.white
+              | Таким образом новая модель организационной деятельности способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Повседневная практика показывает, что дальнейшее развитие различных форм деятельности требуют от нас анализа форм развития.
+            a.btn.btn-large.btn-rounded.btn-light-transparent(href='#') Читать
+          // end fist promo box
+        // end col
+        .col-md-4.nopadding
+          .promo-box-third
+            i.icon.icon-Dollars
+            h2.heading-white Успешность работы
+            p.white
+              | Таким образом новая модель организационной деятельности способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Повседневная практика показывает, что дальнейшее развитие различных форм деятельности требуют от нас анализа форм развития.
+            a.btn.btn-large.btn-rounded.btn-light-transparent(href='#') Читать
+          // end fist promo box
+        // end col
+      // end row
+    // end container
+  // end promo boxes
+  // Partners
+  section.partners-dark
+    .container
+      .row
+        .col-md-2.col-sm-4.col-xs-6
+          a(href='#')
+            img(src='upload/partner_logo_1.png', alt='partner logo 1')
+        // end first logo
+        .col-md-2.col-sm-4.col-xs-6
+          a(href='#')
+            img(src='upload/partner_logo_2.png', alt='partner logo 2')
+        // end second logo
+        .col-md-2.col-sm-4.col-xs-6
+          a(href='#')
+            img(src='upload/partner_logo_3.png', alt='partner logo 3')
+        // end third logo
+        .col-md-2.col-sm-4.col-xs-6
+          a(href='#')
+            img(src='upload/partner_logo_4.png', alt='partner logo 4')
+        // end fourth logo
+        .col-md-2.col-sm-4.col-xs-6
+          a(href='#')
+            img(src='upload/partner_logo_5.png', alt='partner logo 5')
+        // end fifth logo
+        .col-md-2.col-sm-4.col-xs-6
+          a(href='#')
+            img(src='upload/partner_logo_6.png', alt='partner logo 6')
+        // end last logo
+      // end row
+    // end container
+  // end partners
+  // Contact
+  section.section-wrap.contact
+    .container
+      h2.text-center Связь
+      p.subheading.text-center Свяжитесь с нами
+      .main-border.blue
+      .row.mt50
+        .col-md-7.col-sm-7
+          form#contact-form(action='#')
+            input#name.form-control(name='name', type='text', placeholder='Имя*')
+            input#mail.form-control(name='mail', type='email', placeholder='E-mail*')
+            input#subject.form-control(name='subject', type='text', placeholder='Тема')
+            textarea#comment.form-control(name='comment', placeholder='Сообщение')
+            input#submit-message(type='submit', value='Отправить')
+            #msg.message
+        // end col
+        .col-md-4.col-md-offset-1.col-sm-5
+          h5 Ждем Вас
+          p
+            | Время работы 8:00 pm – 20:00
+            br
+            | 						звоните или пишите нам
+          .contact-item
+            .contact-icon
+              i.icon.icon-Phone2
+            span 111-111-111
+          // end phone number
+          .contact-item
+            .contact-icon
+              i.icon.icon-Mail
+            a(href='#') orazmuhamed16@gmail.com
+          // end email
+          .contact-item
+            .contact-icon
+              i.icon.icon-House
+            p
+              | Название компании
+              br
+              | 							Казахстан
+              br
+              | 							Алматы, ул. Байтурсынова
+              br
+              | 							11111
+          // end address
+        // end col
+      // end row
+    // end container
+  // end contact
+  // Footer
+  footer#footer
+    .container
+      .footer-widgets
+        .row
+          .col-md-4
+            .footer-about-us
+              h5.heading-white О комнпаии
+              p
+                | Таким образом новая модель организационной деятельности способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям.
+              .social-icons
+                a(href='#')
+                  i.fa.fa-facebook
+                a(href='#')
+                  i.fa.fa-twitter
+                a(href='#')
+                  i.fa.fa-google-plus
+                a(href='#')
+                  i.fa.fa-linkedin
+                a(href='#')
+                  i.fa.fa-pinterest-p
+                a(href='#')
+                  i.fa.fa-instagram
+          // end about us
+          .col-md-4
+            h5.heading-white Адрес
+            .office-1
+              p Казахстан, Алматы
+              p Телефон: 111-111-111
+              p
+                | Email: 
+                a(href='mailto:info@gmail.com') info@gmail.com
+            .office-2
+              p Казахстан, Алматы
+              p Телефон: 111-111-111
+              p
+                | Email: 
+                a(href='mailto:info@gmail.com') info@gmail.com
+          // end stay in touch
+          .col-md-4
+            h5.heading-white Последние новости
+            .footer-posts
+              .footer-entry
+                h6
+                  a(href='blog-single.html') Заголовок новости №1
+                span
+                  | 11 август, 2015 / 
+                  a(href='blog-single.html') 10 комментариев
+              // end entry
+              .footer-entry
+                h6
+                  a(href='blog-single.html') Заголовок новости №2
+                span
+                  | 5 октября, 2016 / 
+                  a(href='blog-single.html') 03 комментариев
+              // end entry
+              .footer-entry
+                h6
+                  a(href='blog-single.html') Заголовок новости №3
+                span
+                  | 05 август, 2015 / 
+                  a(href='blog-single.html') 05 комментариев
+              // end entry
+            // end footer posts
+          // end latest posts
+        // end row
+      // end footer widgets
+    // end container
+    .bottom-footer
+      .container
+        .row
+          .col-xs-12.text-center
+            .copyright
+              | © 2015 World Information - шаблон вебсайта 
+              a(href='http://HTML6.COM.RU') HTML6.COM.RU
+          // end col
+        // end row
+      // end container
+    // end bottom footer
+  // end footer
+  #back-to-top
+    a(href='#top')
+      i.fa.fa-angle-up
+// end main-wrapper
